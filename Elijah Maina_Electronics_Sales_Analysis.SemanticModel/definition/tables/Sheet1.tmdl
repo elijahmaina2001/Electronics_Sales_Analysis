@@ -1,0 +1,230 @@
+table Sheet1
+	lineageTag: cc3b0c3a-fc1d-4491-b80e-b139b0c3314a
+
+	measure 'Total Sales' = SUM(Sheet1[SalesAmount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ad5976b3-6677-422a-851b-fa8e86361743
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Profit' = SUM(Sheet1[Profit])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 3446ae09-9dd0-48ca-8f69-b3c98e14dd6f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Profit Margin' = DIVIDE([Total Profit], [Total Sales], 0)
+		lineageTag: f13ede05-4889-4efb-9635-63ddbde1244d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Orders' = COUNT(Sheet1[OrderID])
+		formatString: 0
+		lineageTag: dc062f4f-c3ca-41cf-8be3-35fbe72df81a
+
+	measure 'Avg Discount' = AVERAGE(Sheet1[Discount])
+		lineageTag: 0dd8e68b-3bff-4da7-8453-7422b91d500d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Growth' = VAR PrevMonth = CALCULATE([Total Sales], DATEADD(Sheet1[OrderDate], -1, MONTH)) RETURN DIVIDE([Total Sales] - PrevMonth, PrevMonth, 0)
+		lineageTag: 7db8a887-7f11-4415-842d-283dba925e27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ba17dec-e5cf-4e56-a09d-0786da653628
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: ee206a61-9885-4242-bd8c-e6cd276d1eb3
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 9e7734de-fe29-429e-a676-32e4d115a126
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 8c43e8bd-4eb4-471e-bf62-1881a450d222
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 81e9dd9a-4801-45b7-a02b-579422450fc2
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 47e060f4-c652-4e05-9039-76ac9332fef6
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: e1434c22-6506-4116-bcad-eaf90e853fa2
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 267c2807-c3e6-4190-be69-a26998d9aa0d
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 45dc8e88-e296-439e-a020-47f88d32c7f6
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discount
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fb9cba9-e52f-4f48-8bbb-af870efa9ad0
+		summarizeBy: sum
+		sourceColumn: Discount
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6966ebfd-504d-4db4-ac19-bebd4a813507
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: 66d95479-25de-4d55-857a-2a7f11901838
+			defaultHierarchy: LocalDateTable_a4d7e377-703e-4af8-b64e-22993a31f6fc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ab54f478-0185-42d7-b402-dac1f4dbb9c1
+		summarizeBy: none
+		sourceColumn: DeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: 5904d35d-7ea5-47ed-b1cf-a47971675dec
+			defaultHierarchy: LocalDateTable_e5f2efd8-8977-4600-b122-cfd2c2489653.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PaymentMethod
+		dataType: string
+		lineageTag: 7d4c2e67-ba87-4e74-b796-98f411ee4722
+		summarizeBy: none
+		sourceColumn: PaymentMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesRep
+		dataType: string
+		lineageTag: dde4a459-c8da-44c4-8405-8819872b9234
+		summarizeBy: none
+		sourceColumn: SalesRep
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingCost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: b61271a0-6bdc-46d2-8e21-d934d682f29f
+		summarizeBy: sum
+		sourceColumn: ShippingCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Profit
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 0e907659-1e26-49ac-b7bd-06720bff6dd1
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Currency
+		dataType: string
+		lineageTag: dc62fc14-bd34-45f5-b969-3637ba0c3f9a
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerAge
+		dataType: int64
+		formatString: 0
+		lineageTag: fc80ef29-8a13-45fe-9db5-bb4d61c827f4
+		summarizeBy: sum
+		sourceColumn: CustomerAge
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerEmail
+		dataType: string
+		lineageTag: 4871aaa1-dd11-451a-8e5a-6d0dffac7a54
+		summarizeBy: none
+		sourceColumn: CustomerEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\User\OneDrive\Documents\Power BI Desktop\electronics sales data.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrderID", Int64.Type}, {"CustomerName", type text}, {"City", type text}, {"Country", type text}, {"Region", type text}, {"ProductName", type text}, {"Category", type text}, {"SalesAmount", Currency.Type}, {"Quantity", Int64.Type}, {"Discount", Int64.Type}, {"OrderDate", type date}, {"DeliveryDate", type date}, {"PaymentMethod", type text}, {"SalesRep", type text}, {"ShippingCost", Currency.Type}, {"Profit", Currency.Type}, {"Currency", type text}, {"CustomerAge", Int64.Type}, {"CustomerEmail", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

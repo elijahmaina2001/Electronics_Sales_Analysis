@@ -1,0 +1,147 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"},\"type\":2},\"customTheme\":{\"name\":\"NewExecutive\",\"version\":{\"visual\":\"2.1.0\",\"report\":\"2.1.0\",\"page\":\"2.0.0\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          },
+          {
+            "name": "NewExecutive",
+            "path": "BuiltInThemes/NewExecutive.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "64256a9adae1ed5de5da",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"04b28ff28d59a4588ac5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1280,\"height\":55.2021563342318,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Electronics Sales Performance Dashboard\",\"textStyle\":{\"fontFamily\":\"Times New Roman\",\"fontSize\":\"32pt\",\"color\":\"#118dff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 55.20,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"1a0c26490a1cae0ccfe5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":359.6765498652291,\"y\":55.2021563342318,\"z\":5004,\"width\":212.1832884097035,\"height\":121.61725067385444,\"tabOrder\":5004}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Category\",\"active\":true},{\"queryRef\":\"Sheet1.Region\"},{\"queryRef\":\"Sheet1.Country\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Sheet1.Category\",\"NativeReferenceName\":\"Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Sheet1.Region\",\"NativeReferenceName\":\"Region\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Country\"},\"Name\":\"Sheet1.Country\",\"NativeReferenceName\":\"Country\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Sheet1.Category\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Category\"}}],\"isPinned\":true},{\"queryRefs\":[\"Sheet1.Region\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sheet1\"}},\"Property\":\"Region\"}}],\"isPinned\":true},{\"queryRefs\":[\"Sheet1.Country\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 121.62,
+          "width": 212.18,
+          "x": 359.68,
+          "y": 55.20,
+          "z": 5004.00
+        },
+        {
+          "config": "{\"name\":\"3b7f986d71360bfd1cab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":121.98895027624309,\"z\":5000,\"width\":371.27071823204415,\"height\":314.69613259668506,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sheet1.Total Sales\"}],\"Category\":[{\"queryRef\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Quarter\",\"active\":true},{\"queryRef\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Month\",\"active\":true},{\"queryRef\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Day\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"},\"Name\":\"Sheet1.Total Sales\",\"NativeReferenceName\":\"Total Sales\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"OrderDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"OrderDate Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"OrderDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Quarter\",\"NativeReferenceName\":\"OrderDate Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"OrderDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"OrderDate Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"OrderDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"Sheet1.OrderDate.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"OrderDate Day\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 314.70,
+          "width": 371.27,
+          "x": 0.00,
+          "y": 121.99,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"5012a820e880f152687d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":396.02209944751377,\"y\":436.68508287292815,\"z\":5005,\"width\":447.29281767955797,\"height\":282.87292817679554,\"tabOrder\":5005}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sheet1.Total Profit\"}],\"Category\":[{\"queryRef\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Quarter\",\"active\":true},{\"queryRef\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Month\",\"active\":true},{\"queryRef\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Day\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Profit\"},\"Name\":\"Sheet1.Total Profit\",\"NativeReferenceName\":\"Total Profit\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"DeliveryDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"DeliveryDate Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"DeliveryDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Quarter\",\"NativeReferenceName\":\"DeliveryDate Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"DeliveryDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"DeliveryDate Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"DeliveryDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"Sheet1.DeliveryDate.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"DeliveryDate Day\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 282.87,
+          "width": 447.29,
+          "x": 396.02,
+          "y": 436.69,
+          "z": 5005.00
+        },
+        {
+          "config": "{\"name\":\"55ac8e744a7c503ddaa8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":371.27071823204415,\"y\":176.7955801104972,\"z\":5006,\"width\":472.0441988950276,\"height\":259.88950276243094,\"tabOrder\":5006}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sheet1.Profit Margin\"}],\"Category\":[{\"queryRef\":\"Sheet1.Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit Margin\"},\"Name\":\"Sheet1.Profit Margin\",\"NativeReferenceName\":\"Profit Margin\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Sheet1.Category\",\"NativeReferenceName\":\"Category\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit Margin\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 259.89,
+          "width": 472.04,
+          "x": 371.27,
+          "y": 176.80,
+          "z": 5006.00
+        },
+        {
+          "config": "{\"name\":\"5ab7d8db4b95d7395788\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1150.6199460916441,\"y\":45.714285714285715,\"z\":3000,\"width\":129.3800539083558,\"height\":121.61725067385444,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Total Orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Orders\"},\"Name\":\"Sheet1.Total Orders\",\"NativeReferenceName\":\"Total Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Orders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.62,
+          "width": 129.38,
+          "x": 1150.62,
+          "y": 45.71,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"73054e97120711fd7587\",\"layouts\":[{\"id\":0,\"position\":{\"x\":860.8086253369272,\"y\":176.81940700808624,\"z\":5001,\"width\":407.11590296495956,\"height\":227.7088948787062,\"tabOrder\":5001}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sheet1.Category\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sheet1.Total Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Sheet1.Category\",\"NativeReferenceName\":\"Category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"},\"Name\":\"Sheet1.Total Sales\",\"NativeReferenceName\":\"Total Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 227.71,
+          "width": 407.12,
+          "x": 860.81,
+          "y": 176.82,
+          "z": 5001.00
+        },
+        {
+          "config": "{\"name\":\"828ff2be50950e706f8e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":843.3149171270718,\"y\":404.8618784530386,\"z\":5002,\"width\":436.68508287292815,\"height\":314.69613259668506,\"tabOrder\":5002}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Sheet1.ProductName\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sheet1.Total Sales\"}],\"Series\":[{\"queryRef\":\"Sheet1.Region\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Sheet1.Region\",\"NativeReferenceName\":\"Region\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"},\"Name\":\"Sheet1.Total Sales\",\"NativeReferenceName\":\"Total Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ProductName\"},\"Name\":\"Sheet1.ProductName\",\"NativeReferenceName\":\"ProductName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 314.70,
+          "width": 436.69,
+          "x": 843.31,
+          "y": 404.86,
+          "z": 5002.00
+        },
+        {
+          "config": "{\"name\":\"e0664011cd6a46ced471\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":436.68508287292815,\"z\":5003,\"width\":328.83977900552486,\"height\":282.87292817679554,\"tabOrder\":5003}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.ProductName\"},{\"queryRef\":\"Sheet1.Total Sales\"},{\"queryRef\":\"Sheet1.Total Profit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ProductName\"},\"Name\":\"Sheet1.ProductName\",\"NativeReferenceName\":\"ProductName\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"},\"Name\":\"Sheet1.Total Sales\",\"NativeReferenceName\":\"Total Sales\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Profit\"},\"Name\":\"Sheet1.Total Profit\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ProductName\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 282.87,
+          "width": 328.84,
+          "x": 0.00,
+          "y": 436.69,
+          "z": 5003.00
+        },
+        {
+          "config": "{\"name\":\"e3f74b2fe9072ddbbf56\",\"layouts\":[{\"id\":0,\"position\":{\"x\":826.3072776280324,\"y\":45.714285714285715,\"z\":1000,\"width\":188.89487870619945,\"height\":121.61725067385444,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Total Profit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Profit\"},\"Name\":\"Sheet1.Total Profit\",\"NativeReferenceName\":\"Total Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Profit\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.62,
+          "width": 188.89,
+          "x": 826.31,
+          "y": 45.71,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e519d34878894c23ba4a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":571.8598382749326,\"y\":55.2021563342318,\"z\":0,\"width\":254.44743935309972,\"height\":112.12938005390835,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Total Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"},\"Name\":\"Sheet1.Total Sales\",\"NativeReferenceName\":\"Total Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Total Sales\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 112.13,
+          "width": 254.45,
+          "x": 571.86,
+          "y": 55.20,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e59a665f6756dda2a854\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1015.2021563342317,\"y\":45.714285714285715,\"z\":2000,\"width\":141.455525606469,\"height\":121.61725067385444,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sheet1.Profit Margin\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Sheet1\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit Margin\"},\"Name\":\"Sheet1.Profit Margin\",\"NativeReferenceName\":\"Profit Margin\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit Margin\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.62,
+          "width": 141.46,
+          "x": 1015.20,
+          "y": 45.71,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "NewExecutive"
+}

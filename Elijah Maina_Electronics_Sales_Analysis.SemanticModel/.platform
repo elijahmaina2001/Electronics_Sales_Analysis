@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Elijah Maina_Electronics_Sales_Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3825a3a6-72f9-4a50-9d10-74325b80e207"
+  }
+}

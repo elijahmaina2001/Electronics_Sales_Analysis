@@ -1,0 +1,10 @@
+relationship 66d95479-25de-4d55-857a-2a7f11901838
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sheet1.OrderDate
+	toColumn: LocalDateTable_a4d7e377-703e-4af8-b64e-22993a31f6fc.Date
+
+relationship 5904d35d-7ea5-47ed-b1cf-a47971675dec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sheet1.DeliveryDate
+	toColumn: LocalDateTable_e5f2efd8-8977-4600-b122-cfd2c2489653.Date
+
